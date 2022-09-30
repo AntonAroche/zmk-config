@@ -137,11 +137,6 @@ name: name##_macro {                  \
 	};
 };
 
-
-#define HRML(k1,k2,k3,k4) &lht LSHFT k1  &lht LALT k2  &lht LCTRL k3  &lht LGUI k4
-#define HRMR(k1,k2,k3,k4) &rht RGUI k1  &rht RCTRL k2  &rht RALT k3  &rht RSHFT k4
-#define HT(k1,k2,k3,k4) &ht LG(V) k1  &ht LG(C) k2  &ht LG(X) k3  &ht LG(Z) k4
-
 / {
 	keymap {
 		compatible = "zmk,keymap";
@@ -163,7 +158,7 @@ name: name##_macro {                  \
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
 			&kp BSPC    &kp PIPE  &kp PLUS   &kp EQUAL  ________     &kp C_BRI_DN   &kp N7     &kp N8     &kp N9   &kp C_BRI_UP
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-			&kp MINUS   &kp SQT   &kp COLON  &kp ENTER  &kp LS(ENTER)  &kp GRAVE   &kp N1      &kp N2   &kp N3      &Kp N0
+			&kp MINUS   &kp SQT   &kp COLON  &kp ENTER  &kp LS(ENTER)  &kp GRAVE   &kp N1      &kp N2   &kp N3      &kp N0
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 		    &kp COMMA  &kp AMPS   &kp AT     &kp DOT    ________       ________    &kp N4     &kp N5     &kp N6    &kp STAR
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
