@@ -113,6 +113,7 @@ combo_##name {                        \
 		COMBO(enter, &kp ENTER, 12 13)
 		COMBO(search, &kp LG(SPACE), 16 17)
 		COMBO(grave, &kp GRAVE, 17 18)
+		COMBO(caps, &kp CAPS, 18 19)
 		// vertical
 		COMBO(dash, &kp MINUS, 3 13)
 		COMBO(under, &kp UNDER, 13 23)
