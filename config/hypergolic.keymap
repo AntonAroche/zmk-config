@@ -104,17 +104,32 @@ combo_##name {                        \
 / {
 	combos {
 		compatible = "zmk,combos";
-		COMBO(numb,   &tog NUM,     25 33)
-		COMBO(vol_up, &kp C_VOL_UP,  9 19)
-		COMBO(vol_dn, &kp C_VOL_DN, 19 29)
-		COMBO(caps_w, &caps_word,   10 19)
+		// outer vol/bright
+		COMBO(vol_up, &kp C_VOL_UP,  0 10)
+		COMBO(vol_dn, &kp C_VOL_DN, 10 20)
+		COMBO(brigh_up, &kp C_BRIGHTNESS_INC, 9 19)
+		COMBO(brigh_dn, &kp C_BRIGHTNESS_DEC, 19 29)
+		//bluetooth
+		COMBO(blu0, &bt BT_SEL 0, 4 5)
+		COMBO(blu1, &bt BT_SEL 1, 14 15)
+		// horizontal
+		COMBO(enter, &kp ENTER 12 13)
+		COMBO(tab, &kp TAB 16 17)
+		COMBO(esc, &kp ESC 18 19)
+		COMBO(excl, &kp EXCL 10 11)
+		COMBO(grave, &kp GRAVE 17 18)
+		// vertical
+		COMBO(dash, &kp MINUS 0 10)
+		COMBO(under, &kp UNDER 10 20)
+		COMBO(sqt, &kp SQT 1 11)
+		COMBO(dqt, &kp DQT 11 21)
+		COMBO(colon, &kp COLON 2 12)
+		COMBO(semi, &kp SEMI 12 22)
+		
 		// invoke macros
 		COMBO(vim_q,  &vim_q,   0  1)
 		COMBO(vim_s,  &vim_s,  20 21)
 		COMBO(dir_up, &dir_up, 28 29)
-		// navigation
-		COMBO(nav_dn, NAV_DN,  26 27)
-		COMBO(nav_up, NAV_UP,  27 28)
 	};
 };
 
@@ -143,24 +158,24 @@ name: name##_macro {                  \
 		BASE_layer {
 			bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-			&kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp CAPS
+			&kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp TAB
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-		   	&kp A     &kp R      &kp S      &kp T     &kp G          &kp M     &kp N        &kp E      &kp I     &kp O
+		   	&kp A     &kp R      &kp S      &kp T     &kp G            &kp M     &kp N        &kp E      &kp I     &kp O
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 			&kp Z      &kp X      &kp C      &kp D      &kp V          &kp K       &kp H     &kp COMMA   &kp DOT    &kp FSLH
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
 			                                  &mo NAV  &kp SPACE    &mt LSHFT BSPC  &mo NUM
 		//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 			>;
-		};
+		};qst
 		NUM_layer {
 			bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-			&kp BSPC    &kp PIPE  &kp PLUS   &kp EQUAL  ________     &kp C_BRI_DN   &kp N7     &kp N8     &kp N9   &kp C_BRI_UP
+		   &kp DOLLAR   &kp LBRC  &kp RBRC    &kp PLUS   &kp CARET      &kp TILDE   &kp N7     &kp N8     &kp N9     &kp BSLH
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-			&kp MINUS   &kp SQT   &kp COLON  &kp ENTER  &kp LS(ENTER)  &kp GRAVE   &kp N1      &kp N2   &kp N3      &kp N0
+			&kp LPAR    &kp AT  &kp EQUAL   &kp RPAR   &kp AMPS        &kp PIPE     &kp N1      &kp N2   &kp N3      &kp N0
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-		    &kp COMMA  &kp AMPS   &kp AT     &kp DOT    ________       ________    &kp N4     &kp N5     &kp N6    &kp STAR
+		     &kp LT    &kp LBKT   &kp RBKT    &kp GT   &kp PERCENT     &kp POUND    &kp N4     &kp N5     &kp N6    &kp STAR
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
 			                                 &mo SYM    ________       ________   ________
 		//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -169,26 +184,13 @@ name: name##_macro {                  \
 		NAV_layer {
 			bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-	  &kp C_VOL_UP   &kp LG(A)   &sk LGUI   &kp LG(S)  &kp C_VOL_DN      ________  &kp C_PREV &kp C_PLAY &kp C_NEXT  ________
+	        ________   &kp LG(A)   &sk LGUI   &kp LG(S)  ________      ________  &kp C_PREV &kp C_PLAY &kp C_NEXT  ________
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-			&kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp ESC      &kp ENTER  &kp LG(SPACE)  &kp LG(P)  &kp LG(F)   &sk LCTRL
+			&kp LEFT   &kp DOWN   &kp UP   &kp RIGHT    ________      ________  &kp LG(SPACE)  &kp LG(P)  &kp LG(F)  &sk LCTRL
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 		   &kp LG(Z)   &kp LG(X)  &kp LG(C)  &kp LC(C)  &kp LG(V)    &kp LC(R)  &sk LSHIFT  &sk LGUI   &sk LALT   &kp LG(FSLH)
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
 				                             ________   ________       ________   &mo SYM
-		//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-			>;
-		};
-		SYM_layer {
-			bindings = <
-		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-			&kp BSPC   &kp ENTER   &kp SPACE &kp LS(TAB) ________     ________      &kp PLUS  &kp LBRC   &kp RBRC    ________
-		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-		  &kp UNDER    &kp DQT    &kp SEMI   &kp TAB    &kp CARET     &kp TILDE   &kp LPAR    &kp EXCL   &kp EQUAL  &kp RPAR
-		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-		    &kp BSLH  &kp PERCENT &kp POUND  &kp DOLLAR  ________    ________    &kp LT     &kp LBKT   &kp RBKT    &kp GT
-		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-			                                 ________   ________       ________   ________
 		//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 			>;
 		};
