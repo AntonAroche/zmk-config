@@ -109,7 +109,7 @@ combo_##name {                        \
 		COMBO(blu1, &bt BT_SEL 1, 14 15)
 		// horizontal
 		COMBO(enter, &kp ENTER, 12 13)
-		COMBO(search, &kp LG(SPACE), 12 13)
+		COMBO(search, &kp LG(SPACE), 16 17)
 		COMBO(esc, &kp ESC, 18 19)
 		COMBO(excl, &kp EXCL, 10 11)
 		COMBO(grave, &kp GRAVE, 17 18)
