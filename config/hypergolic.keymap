@@ -108,8 +108,7 @@ combo_##name {                        \
 		COMBO(blu0, &bt BT_SEL 0, 4 5)
 		COMBO(blu1, &bt BT_SEL 1, 14 15)
 		// horizontal
-		COMBO(excl, &kp EXCL, 10 11)
-		COMBO(esc, &kp ESC, 11 12)
+		COMBO(esc, &kp ESC, 10 11)
 		COMBO(enter, &kp ENTER, 12 13)
 		COMBO(search, &kp LG(SPACE), 16 17)
 		COMBO(grave, &kp GRAVE, 17 18)
@@ -169,11 +168,11 @@ name: name##_macro {                  \
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
 		   &kp DOLLAR   &kp LBRC  &kp RBRC    &kp PLUS   &kp CARET      &kp TILDE   &kp N7     &kp N8     &kp N9     &kp BSLH
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-			&kp LPAR    &kp AT  &kp EQUAL   &kp RPAR   &kp AMPS        &kp PIPE     &kp N1      &kp N2   &kp N3      &kp N0
+			&kp LPAR    &kp EXCL &kp EQUAL   &kp RPAR   &kp AMPS        &kp PIPE     &kp N1      &kp N2   &kp N3      &kp N0
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 		     &kp LT    &kp LBKT   &kp RBKT    &kp GT   &kp PERCENT     &kp POUND    &kp N4     &kp N5     &kp N6    &kp STAR
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-			                                 ________    ________       ________   ________
+			                                  &kp AT    ________       ________   ________
 		//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 			>;
 		};
