@@ -107,7 +107,7 @@ combo_##name {                        \
 		//bluetooth
 		COMBO(blu0, &bt BT_SEL 0, 4 5)
 		COMBO(blu1, &bt BT_SEL 1, 14 15)
-		COMBO(bluclr, &bt BT_CLR 24 25)
+		COMBO(bluclr, &bt BT_CLR, 24 25)
 		// horizontal
 		COMBO(esc, &kp ESC, 10 11)
 		COMBO(enter, &kp ENTER, 12 13)
