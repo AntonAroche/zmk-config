@@ -123,8 +123,8 @@ combo_##name {                        \
 		COMBO(dqt, &kp DQT, 11 21)
 
 		// invoke macros
-		COMBO(vim_q,  &vim_q,   0  1)
-		COMBO(vim_s,  &vim_s,  20 21)
+		COMBO(vim_s,  &vim_s,  0 1)
+		COMBO(vim_q,  &vim_q,  1 2)
 		COMBO(dir_up, &dir_up, 28 29)
 	};
 };
