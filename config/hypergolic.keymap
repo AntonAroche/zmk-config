@@ -86,7 +86,7 @@
 
 #define COMBO(name, keypress, keypos) \
 combo_##name {                        \
-	timeout-ms = <30>;                \
+	timeout-ms = <40>;                \
 	bindings = <keypress>;            \
 	key-positions = <keypos>;         \
 };
@@ -125,7 +125,7 @@ combo_##name {                        \
 		// invoke macros
 		COMBO(vim_s,  &vim_s,  0 1)
 		COMBO(vim_q,  &vim_q,  1 2)
-		COMBO(dir_up, &dir_up, 28 29)
+		COMBO(dir_up, &dir_up, 23 24)
 	};
 };
 
@@ -142,7 +142,7 @@ name: name##_macro {                  \
 
 / {
 	macros {
-		MACRO(vim_q,  &kp COLON &kp Q &kp EXCL)
+		MACRO(vim_q,  &kp COLON &kp Q &kp EXCL &kp ENTER)
 		MACRO(vim_s,  &kp COLON &kp W &kp Q)
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
 	};
@@ -167,20 +167,20 @@ name: name##_macro {                  \
 		NUM_layer {
 			bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-		   &kp DOLLAR   &kp LBRC  &kp RBRC    &kp PLUS   &kp CARET      &kp TILDE   &kp N7     &kp N8     &kp N9     &kp BSLH
+		   &kp DOLLAR   &kp LBRC  &kp RBRC    &kp PLUS   &kp CARET      &kp TILDE   &kp N7     &kp N8     &kp N9   &kp AT  
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 			&kp LPAR    &kp EXCL &kp EQUAL   &kp RPAR   &kp AMPS        &kp PIPE     &kp N1      &kp N2   &kp N3      &kp N0
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 		     &kp LT    &kp LBKT   &kp RBKT    &kp GT   &kp PERCENT     &kp POUND    &kp N4     &kp N5     &kp N6    &kp STAR
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-			                                  &kp AT    ________       ________   ________
+			                                  &sk LGUI  ________       ________   ________
 		//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 			>;
 		};
 		NAV_layer {
 			bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-	        &kp LG(W)  &kp LG(A)   &sk LGUI   &kp LG(S)  ________      ________  &kp C_PREV &kp C_PLAY &kp C_NEXT  ________
+	        &kp LG(W)  &kp LG(A)   &sk LGUI   &kp LG(S)  ________      ________  &kp C_PREV &kp C_PLAY &kp C_NEXT  &kp BSLH
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 			&kp LEFT   &kp DOWN   &kp UP   &kp RIGHT    &kp LG(T)    &kp LG(TILDE) &sk LGUI   &kp LG(P)  &kp LG(F)  &sk LCTRL
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
