@@ -142,7 +142,7 @@ name: name##_macro {                  \
 / {
 	macros {
 		MACRO(vim_q,  &kp COLON &kp Q &kp EXCL &kp ENTER)
-		MACRO(vim_s,  &kp COLON &kp W &kp Q)
+		MACRO(vim_s,  &kp COLON &kp W &kp Q &kp ENTER)
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
 	};
 };
