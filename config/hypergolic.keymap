@@ -130,7 +130,7 @@ combo_##name {                        \
 		// invoke macros
 		COMBO(vim_s,  &vim_s,  0 1)
 		COMBO(vim_q,  &vim_q,  1 2)
-		COMBO(dir_up, &dir_up, 23 24)
+		COMBO(dir_up, &dir_up, 22 23)
 	};
 };
 
