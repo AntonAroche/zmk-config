@@ -99,28 +99,33 @@ combo_##name {                        \
 / {
 	combos {
 		compatible = "zmk,combos";
-		// outer vol/bright
-		COMBO(vol_up, &kp C_VOL_UP,  0 10)
-		COMBO(vol_dn, &kp C_VOL_DN, 10 20)
-		COMBO(brigh_up, &kp C_BRIGHTNESS_INC, 9 19)
-		COMBO(brigh_dn, &kp C_BRIGHTNESS_DEC, 19 29)
 		//bluetooth
 		COMBO(blu0, &bt BT_SEL 0, 4 5)
 		COMBO(blu1, &bt BT_SEL 1, 14 15)
 		COMBO(bluclr, &bt BT_CLR, 24 25)
-		// horizontal
+		// horizontal left
 		COMBO(esc, &kp ESC, 10 11)
+		COMBO(terminal_esc, &kp LC(C), 11 12)
 		COMBO(enter, &kp ENTER, 12 13)
+		// horizontal right
 		COMBO(search, &kp LG(SPACE), 16 17)
 		COMBO(grave, &kp GRAVE, 17 18)
 		COMBO(caps, &kp CAPS, 18 19)
-		// vertical
-		COMBO(dash, &kp MINUS, 3 13)
-		COMBO(under, &kp UNDER, 13 23)
-		COMBO(colon, &kp COLON, 2 12)
-		COMBO(semi, &kp SEMI, 12 22)
+		// vertical left
+		COMBO(vol_up, &kp C_VOL_UP,  0 10)
+		COMBO(vol_dn, &kp C_VOL_DN, 10 20)
 		COMBO(sqt, &kp SQT, 1 11)
 		COMBO(dqt, &kp DQT, 11 21)
+		COMBO(colon, &kp COLON, 2 12)
+		COMBO(semi, &kp SEMI, 12 22)
+		COMBO(dash, &kp MINUS, 3 13)
+		COMBO(under, &kp UNDER, 13 23)
+		// vertical right
+		COMBO(brigh_up, &kp C_BRIGHTNESS_INC, 9 19)
+		COMBO(brigh_dn, &kp C_BRIGHTNESS_DEC, 19 29)
+		COMBO(next, &kp C_NEXT, 8 18)
+		COMBO(play, &kp C_PLAY, 7 17)
+		COMBO(prev, &kp C_PREV, 6 16)
 		// invoke macros
 		COMBO(vim_s,  &vim_s,  0 1)
 		COMBO(vim_q,  &vim_q,  1 2)
@@ -153,9 +158,9 @@ name: name##_macro {                  \
 		BASE_layer {
 			bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-			&kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp TAB
+			&kp Q      &kp W      &kp F      &kp P      &kp B          &kp J       &kp L      &kp U      &kp Y      &kp TAB
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-		   	&kp A     &kp R      &kp S      &kp T     &kp G            &kp M     &kp N        &kp E      &kp I     &kp O
+		   	&kp A     &kp R      &kp S      &kp T     &kp G            &kp M       &kp N        &kp E      &kp I     &kp O
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 			&kp Z      &kp X      &kp C      &kp D      &kp V          &kp K       &kp H     &kp COMMA   &kp DOT    &kp FSLH
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
@@ -166,11 +171,11 @@ name: name##_macro {                  \
 		NUM_layer {
 			bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-		   &kp DOLLAR   &kp LBRC  &kp RBRC    &kp PLUS  &kp POUND      &kp TILDE   &kp N7     &kp N8     &kp N9    &kp AT  
+		   &kp DOLLAR   &kp LBRC  &kp RBRC    &kp PLUS  &kp POUND      &kp TILDE   &kp N7     &kp N8     &kp N9     &kp CARET 
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-			&kp LPAR    &kp EXCL &kp EQUAL   &kp RPAR   &kp AMPS        &kp PIPE   &kp N1      &kp N2   &kp N3      &kp N0
+			&kp LPAR   &kp EXCL   &kp EQUAL   &kp RPAR   &kp AMPS      &kp PIPE    &kp N1     &kp N2     &kp N3      &kp N0
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-		     &kp LT    &kp LBKT   &kp RBKT    &kp GT   &kp PERCENT    &kp CARET    &kp N4     &kp N5     &kp N6    &kp STAR
+		     &kp LT    &kp LBKT   &kp RBKT    &kp GT   &kp PERCENT     &kp AT    &kp N4     &kp N5     &kp N6    &kp STAR
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
 			                                  &sk LGUI  ________       ________   ________
 		//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -179,11 +184,11 @@ name: name##_macro {                  \
 		NAV_layer {
 			bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-	        &kp LG(W)  &kp LG(A)   &sk LGUI   &kp LG(S)  ________      ________  &kp C_PREV &kp C_PLAY &kp C_NEXT  ________
+	        &kp LG(W)  &kp LG(A)   &sk LGUI   &kp LG(S)  ________      ________   ________   ________   ________   ________
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-			&kp LEFT   &kp DOWN   &kp UP   &kp RIGHT    &kp LG(T)    &kp LG(TILDE) &sk LGUI   &kp LG(P)  &kp LG(F)  &sk LCTRL
+			&kp LEFT   &kp DOWN    &kp UP    &kp RIGHT  &kp LG(T)    &kp LG(TILDE) &sk LGUI   &kp LG(P)  &kp LG(F)  &sk LCTRL
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-		   &kp LG(Z)   &kp LG(X)  &kp LG(C)  &kp LC(C)  &kp LG(V)    &kp LC(R)    ________    &sk LALT  &kp BSLH  &kp LG(FSLH)
+		   &kp LG(Z)   &kp LG(X)  &kp LG(C)  ________   &kp LG(V)      &kp LC(R)  ________   &sk LALT  &kp BSLH  &kp LG(FSLH)
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
 				                             ________   ________       ________   ________
 		//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
