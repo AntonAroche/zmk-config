@@ -104,13 +104,14 @@ combo_##name {                        \
 		COMBO(blu1, &bt BT_SEL 1, 14 15)
 		COMBO(bluclr, &bt BT_CLR, 24 25)
 		// horizontal left
-		COMBO(esc, &kp ESC, 10 11)
-		COMBO(terminal_esc, &kp LC(C), 11 12)
+		COMBO(terminal_esc, &kp LC(C), 10 11)
+		COMBO(esc, &kp ESC, 11 12)
 		COMBO(enter, &kp ENTER, 12 13)
 		// horizontal right
 		COMBO(search, &kp LG(SPACE), 16 17)
 		COMBO(grave, &kp GRAVE, 17 18)
 		COMBO(caps, &kp CAPS, 18 19)
+		//TODO capsword
 		// vertical left
 		COMBO(vol_up, &kp C_VOL_UP,  0 10)
 		COMBO(vol_dn, &kp C_VOL_DN, 10 20)
