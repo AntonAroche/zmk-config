@@ -185,9 +185,9 @@ name: name##_macro {                  \
 		NAV_layer {
 			bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-	        &kp LG(W)  &kp LG(A)   &sk LGUI   &kp LG(S)  ________   ________	&kp LC(O) &kp LC(DOWN)  &kp LC(UP)   &kp LC(I)
+	        &kp LG(W)  &kp LG(A)   &sk LGUI   &kp LG(S)  ________   ________	&kp LC(O) &kp LC(D)  &kp LC(U)   &kp LC(I)
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-			&kp LEFT   &kp DOWN    &kp UP    &kp RIGHT  &kp LG(T)    &kp LG(TILDE) &sk LGUI   &kp LG(P)  &kp LG(F)  &sk LCTRL
+			&kp LEFT   &kp DOWN    &kp UP    &kp RIGHT  &kp LG(T)    &kp LG(TILDE) &sk LGUI   &kp LC(P)  &kp LG(F)  &sk LCTRL
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 		   &kp LG(Z)   &kp LG(X)  &kp LG(C)  ________   &kp LG(V)      &kp LC(R)  ________   &sk LALT  &kp BSLH  &kp LG(FSLH)
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
