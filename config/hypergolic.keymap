@@ -108,14 +108,14 @@ combo_##name {                        \
 		COMBO(terminal_esc, &kp LC(C), 11 12)
 		COMBO(enter, &kp ENTER, 12 13)
 		// horizontal right
-		COMBO(search, &kp LG(SPACE), 16 17)
+		COMBO(setrstrch, &kp LG(SPACE), 16 17)
 		COMBO(grave, &kp GRAVE, 17 18)
 		COMBO(caps, &kp CAPS, 18 19)
 		//TODO capsword
 		// vertical left
 		COMBO(vol_up, &kp C_VOL_UP,  0 10)
 		COMBO(vol_dn, &kp C_VOL_DN, 10 20)
-		COMBO(sqt, &kp SQT, 1 11)
+		COMBOssqt, &kp SQT, 1 11)
 		COMBO(dqt, &kp DQT, 11 21)
 		COMBO(colon, &kp COLON, 2 12)
 		COMBO(semi, &kp SEMI, 12 22)
@@ -185,7 +185,7 @@ name: name##_macro {                  \
 		NAV_layer {
 			bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-	        &kp LG(W)  &kp LG(A)   &sk LGUI   &kp LG(S)  ________   ________ &kp LC(LA(LEFT) ________ &kp LC(LA(LEFT)   ________
+	        &kp LG(W)  &kp LG(A)   &sk LGUI   &kp LG(S)  ________   ________	________ &kp LC(DOWN)  &kp LC(UP)   ________
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 			&kp LEFT   &kp DOWN    &kp UP    &kp RIGHT  &kp LG(T)    &kp LG(TILDE) &sk LGUI   &kp LG(P)  &kp LG(F)  &sk LCTRL
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
