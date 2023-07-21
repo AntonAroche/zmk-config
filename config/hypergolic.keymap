@@ -106,35 +106,40 @@ combo_##name {                        \
 		//bluetooth
 		COMBO(blu0, &bt BT_SEL 0, 4 5)
 		COMBO(blu1, &bt BT_SEL 1, 14 15)
-		COMBO(bluclr, &bt BT_CLR, 24 25)
-		// horizontal left
+		COMBO(blu_clear, &bt BT_CLR, 24 25)
+		// horizontal
+		// // main 
 		COMBO(esc, &kp ESC, 10 11)
 		COMBO(terminal_esc, &kp LC(C), 11 12)
 		COMBO(enter, &kp ENTER, 12 13)
-		// horizontal right
-		COMBO(setrstrch, &kp LG(SPACE), 16 17)
-		COMBO(grave, &kp GRAVE, 17 18)
+		COMBO(albert, &kp LG(SPACE), 16 17)
+		COMBO(tmux, &kp LC(B), 17 18)
 		COMBO(caps, &kp CAPS, 18 19)
-		//TODO capsword
+		// // top
+		COMBO(vim_save,  &vim_s,  0 1)
+		COMBO(vim_quit,  &vim_q,  1 2)
+		// // bottom
+		COMBO(cd_downward, &dir_up, 22 23)
+		// // bottom
 		// vertical left
 		COMBO(vol_up, &kp C_VOL_UP,  0 10)
 		COMBO(vol_dn, &kp C_VOL_DN, 10 20)
-		COMBO(ssqt, &kp SQT, 1 11)
-		COMBO(dqt, &kp DQT, 11 21)
+		COMBO(singlequote, &kp SQT, 1 11)
+		COMBO(doublequote, &kp DQT, 11 21)
 		COMBO(colon, &kp COLON, 2 12)
-		COMBO(semi, &kp SEMI, 12 22)
-		COMBO(dash, &kp MINUS, 3 13)
-		COMBO(under, &kp UNDER, 13 23)
+		COMBO(semicolon, &kp SEMI, 12 22)
+		COMBO(minus, &kp MINUS, 3 13)
+		COMBO(underscore, &kp UNDER, 13 23)
 		// vertical right
-		COMBO(brigh_up, &kp C_BRIGHTNESS_INC, 9 19)
-		COMBO(brigh_dn, &kp C_BRIGHTNESS_DEC, 19 29)
+		COMBO(brightness_up, &kp C_BRIGHTNESS_INC, 9 19)
+		COMBO(brighness_down, &kp C_BRIGHTNESS_DEC, 19 29)
 		COMBO(next, &kp C_NEXT, 8 18)
 		COMBO(play, &kp C_PLAY, 7 17)
 		COMBO(prev, &kp C_PREV, 6 16)
-		// invoke macros
-		COMBO(vim_s,  &vim_s,  0 1)
-		COMBO(vim_q,  &vim_q,  1 2)
-		COMBO(dir_up, &dir_up, 22 23)
+		// UNUSED COMBO(, , 18 28)
+		// UNUSED COMBO(, ,  17 27)
+		// UNUSED COMBO(, , 6 16)	
+		//TODO capsword
 	};
 };
 
@@ -193,7 +198,7 @@ name: name##_macro {                  \
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 			&kp LEFT   &kp DOWN    &kp UP    &kp RIGHT  &kp LG(T)    &kp LC(TILDE) &sk LGUI  &kp LC(P)  &kp LG(F)  &sk LCTRL
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-		   &kp LG(Z)   &kp LG(X)  &kp LG(C)  &kp LG(H)   &kp LG(V)      &kp LC(R)  ________   &sk LALT  &kp BSLH  &kp LG(FSLH)
+		   &kp LG(Z)   &kp LG(X)  &kp LG(C)  &kp LG(H)   &kp LG(V)      &kp LC(R)  &kp GRAVE   &sk LALT  &kp BSLH  &kp LG(FSLH)
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
 				                             ________   ________       ________   ________
 		//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
