@@ -114,7 +114,7 @@ combo_##name {                        \
 		COMBO(enter, &kp ENTER, 12 13)
 		COMBO(albert, &kp LG(SPACE), 16 17)
 		COMBO(tmux, &kp LC(B), 17 18)
-		COMBO(caps, &kp CAPS, 18 19)
+		COMBO(control, &sk LCTRL, 18 19)
 		// // top
 		COMBO(vim_save,  &vim_s,  0 1)
 		COMBO(vim_quit,  &vim_q,  1 2)
@@ -194,7 +194,7 @@ name: name##_macro {                  \
 		NAV_layer {
 			bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-	        &kp LG(W)  &kp LG(A)   &sk LGUI   &kp LG(S)  ________      ________   &kp LC(O) &kp LC(D)  &kp LC(U)   &kp LC(I)
+	        &kp LG(W)  &kp LG(A)   &sk LGUI   &kp LG(S)  ________      &kp CAPS   &kp LC(O) &kp LC(D)  &kp LC(U)   &kp LC(I)
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 			&kp LEFT   &kp DOWN    &kp UP    &kp RIGHT  &kp LG(T)    &kp LC(TILDE) &sk LGUI  &kp LC(P)  &kp LG(F)  &sk LCTRL
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
