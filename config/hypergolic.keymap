@@ -116,8 +116,9 @@ combo_##name {                        \
 		COMBO(tmux, &kp LC(B), 17 18)
 		COMBO(control, &sk LCTRL, 18 19)
 		// // top
-		COMBO(vim_save,  &vim_s,  0 1)
+		COMBO(vim_savequit,  &vim_s,  0 1)
 		COMBO(vim_savenoexit,  &vim_w,  1 2)
+		COMBO(vim_saveall,  &vim_wa,  2 3)
 		// // bottom
 		COMBO(vim_quit,  &vim_q,  20 21)
 		COMBO(cd_downward, &dir_up, 22 23)
@@ -160,6 +161,7 @@ name: name##_macro {                  \
 		MACRO(vim_q,  &kp COLON &kp Q &kp EXCL &kp ENTER)
 		MACRO(vim_s,  &kp COLON &kp W &kp Q &kp ENTER)
 		MACRO(vim_w,  &kp COLON &kp W &kp ENTER)
+        MACRO(vim_wa, &kp COLON &kp W &kp A &kp ENTER
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
 	};
 };
