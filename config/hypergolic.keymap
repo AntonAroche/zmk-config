@@ -161,7 +161,7 @@ name: name##_macro {                  \
 		MACRO(vim_q,  &kp COLON &kp Q &kp EXCL &kp ENTER)
 		MACRO(vim_s,  &kp COLON &kp W &kp Q &kp ENTER)
 		MACRO(vim_w,  &kp ESC &kp COLON &kp W &kp ENTER)
-    MACRO(vim_wa, &kp ESC &kp COLON &kp W &kp A &kp ENTER
+    MACRO(vim_wa, &kp ESC &kp COLON &kp W &kp A &kp ENTER)
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
 	};
 };
@@ -189,7 +189,7 @@ name: name##_macro {                  \
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 			&kp LPAR   &kp EXCL   &kp EQUAL   &kp RPAR   &kp AMPS      &kp PIPE    &kp N1     &kp N2     &kp N3     &kp N0
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-		     &kp LT    &kp LBKT   &kp RBKT    &kp GT   &kp PERCENT     &kp AT      &kp N4     &kp N5     &kp N6    &kp STAR
+		     &kp LT    &kp LBKT   &kp RBKT    &kp GT   &kp STAR     &kp AT      &kp N4     &kp N5     &kp N6    &kp GRAVE
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
 			                                  &kp LS(G)  ________       ________   ________
 		//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -202,7 +202,7 @@ name: name##_macro {                  \
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 			&kp LEFT   &kp DOWN    &kp UP    &kp RIGHT  &kp LG(T)    &kp LC(TILDE) &sk LC(N)  &kp LC(P)  &kp LG(F)  &sk LCTRL
 		//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-		   &kp LG(Z)   &kp LG(X)  &kp LG(C)  &kp LG(H)   &kp LG(V)      &kp LC(R)  &kp GRAVE   &sk LALT  &kp BSLH  &kp LG(FSLH)
+		   &kp LG(Z)   &kp LG(X)  &kp LG(C)  &kp LG(H)   &kp LG(V)      &kp LC(R)  &kp PERCENT   &sk LALT  &kp BSLH  &kp LG(FSLH)
 		//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
 				                             ________   ________       ________   ________
 		//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
