@@ -34,7 +34,6 @@
 	continue-list = <UNDER MINUS BSPC RSHFT LSHFT>;
 };
 
-
 / {
 	behaviors {
 		gresc: grave_escape {
@@ -165,7 +164,7 @@ name: name##_macro {                  \
 		MACRO(vim_w,  &kp ESC &kp COLON &kp W &kp ENTER)
     MACRO(vim_wa, &kp ESC &kp COLON &kp W &kp A &kp ENTER)
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
-    MACRO(gb_toggle, &kp COLON &kp G &kp i &kp t &kp B &kp l &kp a &kp m &kp e &kp T &kp o &kp g &kp g &kp l &kp e &kp ENTER)
+    MACRO(gb_toggle, &kp SPACE &kp LC(G))
  };
 };
 
