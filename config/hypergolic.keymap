@@ -117,8 +117,7 @@ combo_##name {                        \
 		COMBO(control, &sk LCTRL, 18 19)
 		// // top
 		COMBO(vim_savequit,  &vim_s,  0 1)
-		# COMBO(vim_savenoexit,  &vim_w,  1 2)
-		# COMBO(vim_saveall,  &vim_wa,  2 3)
+		COMBO(vim_saveall,  &vim_wa,  1 2)
 		// // bottom
 		COMBO(vim_quit,  &vim_q,  20 21)
 		COMBO(cd_downward, &dir_up, 22 23)
