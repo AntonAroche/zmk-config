@@ -117,6 +117,7 @@ combo_##name {                        \
 		// // top
 		COMBO(vim_savequit,  &vim_s,  0 1)
 		COMBO(vim_saveall,  &vim_wa,  1 2)
+    COMBO(lazy_git, &lazy_git, 7 8)
 		// // bottom
 		COMBO(vim_quit,  &vim_q,  20 21)
 		COMBO(cd_downward, &dir_up, 22 23)
@@ -165,6 +166,7 @@ name: name##_macro {                  \
     MACRO(vim_wa, &kp ESC &kp COLON &kp W &kp A &kp ENTER)
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
     MACRO(gb_toggle, &kp SPACE &kp LC(G))
+    MACRO(lazy_git, &kp l &kp g &kp ENTER)
  };
 };
 
