@@ -124,7 +124,7 @@ combo_##name {                        \
     COMBO(gb_toggle, &gb_toggle, 28 29)
     // // bottom
     // vertical left
-    COMBO(vol_up, &kp C_VOL_U,  0 10)
+    COMBO(vol_up, &kp C_VOL_UP,  0 10)
 		COMBO(vol_dn, &kp C_VOL_DN, 10 20)
 		COMBO(singlequote, &kp SQT, 1 11)
 		COMBO(doublequote, &kp DQT, 11 21)
