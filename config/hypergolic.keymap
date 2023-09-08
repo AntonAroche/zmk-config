@@ -111,21 +111,22 @@ combo_##name {                        \
 		COMBO(esc, &kp ESC, 10 11)
 		COMBO(terminal_esc, &kp LC(C), 11 12)
 		COMBO(enter, &kp ENTER, 12 13)
-		COMBO(albert, &kp LG(SPACE), 16 17)
-		COMBO(tmux, &kp LC(B), 17 18)
-		COMBO(control, &sk LCTRL, 18 19)
-		// // top
-		COMBO(vim_savequit,  &vim_s,  0 1)
-		COMBO(vim_saveall,  &vim_wa,  1 2)
+    COMBO(albert, &kp LG16 17)
+    COMBO(tmux, &kp LC(B), 17 18)
+    COMBO(control, &sk LCTRL, 18 19)
+    // // top
+    COMBO(vim_savequit,  &vim_s,  0 1)
+    COMBO(vim_saveall,  &vim_wa,  1 2)
     COMBO(lazy_git, &lazy_git, 7 8)
-		// // bottom
-		COMBO(vim_quit,  &vim_q,  20 21)
-		COMBO(cd_downward, &dir_up, 22 23)
+    // // bottom
+    COMBO(vim_quit,  &vim_q,  20 21)
+    COMBO(cd_downward, &dir_up, 22 23)
+    COMBO(nvim, &nvim, 26 27)
     COMBO(grave, &kp GRAVE, 27 28)
     COMBO(gb_toggle, &gb_toggle, 28 29)
-		// // bottom
-		// vertical left
-		COMBO(vol_up, &kp C_VOL_UP,  0 10)
+    // // bottom
+    // vertical left
+    COMBO(vol_up, &kp C_VOL_U,  0 10)
 		COMBO(vol_dn, &kp C_VOL_DN, 10 20)
 		COMBO(singlequote, &kp SQT, 1 11)
 		COMBO(doublequote, &kp DQT, 11 21)
@@ -167,6 +168,7 @@ name: name##_macro {                  \
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
     MACRO(gb_toggle, &kp SPACE &kp LC(G))
     MACRO(lazy_git, &kp L &kp G &kp ENTER)
+    MACRO(nvim, &kp n &kp v &kp ENTER)
  };
 };
 
