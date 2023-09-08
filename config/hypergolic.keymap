@@ -166,7 +166,7 @@ name: name##_macro {                  \
 		MACRO(dir_up, &kp DOT &kp DOT &kp FSLH)
     MACRO(gb_toggle, &kp SPACE &kp LC(G))
     MACRO(lazy_git, &kp L &kp G &kp ENTER)
-    MACRO(nvim, &kp n &kp v &kp ENTER)
+    MACRO(nvim, &kp N &kp V &kp ENTER)
  };
 };
 
