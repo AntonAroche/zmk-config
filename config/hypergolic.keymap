@@ -111,7 +111,7 @@ combo_##name {                        \
 		COMBO(esc, &kp ESC, 10 11)
 		COMBO(terminal_esc, &kp LC(C), 11 12)
 		COMBO(enter, &kp ENTER, 12 13)
-    COMBO(albert, &kp LG(space), 16 17)
+    COMBO(albert, &kp LG(SPACE), 16 17)
     COMBO(tmux, &kp LC(B), 17 18)
     COMBO(control, &sk LCTRL, 18 19)
     // // top
